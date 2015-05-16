@@ -7,8 +7,8 @@
 #include "GL/glaux.h"
 #include "windows.h"
 
-int w = 500, h = 500;
-int angle = 0;
+int w = 1024, h = 576;
+int year = 0, month = 0, day = 0;
 
 void init(GLvoid)     // Create Some Everyday Functions
 {
@@ -26,15 +26,29 @@ void display(void)   // Create The Display Function
 {
 	glClear(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT);	// Clear Screen And Depth Buffer
 	glLoadIdentity();									// Reset The Current Modelview Matrix
-	glTranslatef(0.0f, 0.0f, -10.0f);					// Move Left 1.5 Units And Into The Screen 6.0
+	glTranslatef(0.0f, 0.0f, -6.0f);					// Move Left 1.5 Units And Into The Screen 6.0
 	glutSolidSphere(1, 32, 32);
 	
-	angle = angle % 360;
-	glRotatef((GLfloat)angle, 0, 1, 0);
+	year = year % 360;
+	month = month % 360;
+	day = day % 360;
+	
+	glRotatef((GLfloat)year, 0, 1, 0);
 	glTranslatef(3.0f, 0, 0);
 	glutSolidSphere(0.2, 32, 32);
+	
+	glRotatef((GLfloat)month, 0, 1, 0);
+	glTranslatef(0.5f, 0, 0);
+	glutSolidSphere(0.05, 32, 32);
+	
+	glTranslatef(-0.5f, 0, 0);
 	glTranslatef(-3.0f, 0, 0);
-	angle += 10;
+	
+	year += 1;
+	month += 12;
+	glutPostRedisplay();
+	
+	Sleep(25);
 
 	glutSwapBuffers();
 	// Swap The Buffers To Not Be Left With A Clear Screen

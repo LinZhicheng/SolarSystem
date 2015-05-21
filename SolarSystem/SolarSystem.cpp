@@ -3,9 +3,7 @@
 
 #include "windows.h"
 #include "GL/glut.h"
-#include "GL/gl.h"
-#include "GL/glu.h"
-#include "GL/glaux.h"
+#include "GL/GLaux.h"
 
 int w = 1024, h = 576;
 int year = 0, month = 0, day = 0;
@@ -33,7 +31,7 @@ int LoadGLTextures()									// Load Bitmaps And Convert To Textures
 	memset(TextureImage, 0, sizeof(void *) * 1);           	// Set The Pointer To NULL
 
 	// Load The Bitmap, Check For Errors, If Bitmap's Not Found Quit
-	if (TextureImage[0] = LoadBMP(L"资源文件sun256128.bmp"))
+	if (TextureImage[0] = LoadBMP(L"资源文件/sun256128.bmp"))
 	{
 		Status += 1;
 

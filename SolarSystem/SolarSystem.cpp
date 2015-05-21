@@ -3,7 +3,7 @@
 
 #include "windows.h"
 #include "GL/glut.h"
-#include "GL/GLaux.h"
+#include "GL/GLAux.h"
 
 int w = 1024, h = 576;
 int year = 0, month = 0, day = 0;

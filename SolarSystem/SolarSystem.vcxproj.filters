@@ -26,11 +26,19 @@
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="stdafx.cpp">
-      <Filter>源文件</Filter>
-    </ClCompile>
     <ClCompile Include="SolarSystem.cpp">
       <Filter>源文件</Filter>
     </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <Image Include="D:\我的文件\opengl\earth_clouds256128.bmp">
+      <Filter>资源文件</Filter>
+    </Image>
+    <Image Include="D:\我的文件\opengl\moon256128.bmp">
+      <Filter>资源文件</Filter>
+    </Image>
+    <Image Include="D:\我的文件\opengl\sun256128.bmp">
+      <Filter>资源文件</Filter>
+    </Image>
   </ItemGroup>
 </Project>
